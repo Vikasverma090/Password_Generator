@@ -1,65 +1,48 @@
-<div class="container">
-	<h2 class="title">Password Generator</h2>
-	<div class="result">
-		<div class="result__title field-title">
-			Generated Password
-		</div>
-		<div class="result__info right">
-			click to copy
-		</div>
-		<div class="result__info left">
-			copied
-		</div>
-		<div class="result__veiwbox" id="result">
-			CLICK GENERATE
-		</div>
-		<button id="copy-btn" style="--x: 0; --y: 0"> 
-			<i class="far fa-copy"></i>
-		</button>
-	</div>
-	<div class="length range__slider" data-min="4" data-max="32">
-		<div class="length__title field-title" data-length="0">
-			length:
-		</div>
-		<input type="range" id="slider" min="4" max="32" value="16">
-	</div>
-	<div class="settings">
-		<span class="setting__title field-title">
-			setting
-		</span>
-		<div class="setting">
-			<input type="checkbox" id="uppercase" checked>
-			<label for="uppercase">
-				Include Uppercase
-			</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="lowercase" checked>
-			<label for="lowercase">
-				Include Lowercase
-			</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="number" checked>
-			<label for="number">
-				Include Numbers
-			</label>
-		</div>
-		<div class="setting">
-			<input type="checkbox" id="symbol" checked>
-			<label for="symbol">
-				Include Symbols
-			</label>
-		</div>
-		<button class="btn generate" id="generate">
-			Generate Password
-		</button>
-	</div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="Password_Generator.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Password Generator</h2>
+      <div class="result-container">
+        <span id="result"></span>
+        <button class="btn" id="clipboard">
+          <i class="far fa-clipboard"></i>
+        </button>
+      </div>
+      <div class="settings">
+        <div class="setting">
+          <label>Password Length</label>
+          <input type="number" id="length" min="4" max="20" value="20">
+        </div>
+        <div class="setting">
+          <label>Include uppercase letters</label>
+          <input type="checkbox" id="uppercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include lowercase letters</label>
+          <input type="checkbox" id="lowercase" checked>
+        </div>
+        <div class="setting">
+          <label>Include numbers</label>
+          <input type="checkbox" id="numbers" checked>
+        </div>
+        <div class="setting">
+          <label>Include symbols</label>
+          <input type="checkbox" id="symbols" checked>
+        </div>
+      </div>
 
-
-
-
-
-
-
+      <button class="btn btn-large" id="generate">
+        Generate Password
+      </button>
+    </div>
+    <script src="Password_Generator.js"></script>
+  </body>
+</html>
